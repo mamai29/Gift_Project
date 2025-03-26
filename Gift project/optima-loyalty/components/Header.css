@@ -36,3 +36,23 @@
 .header nav .icons span {
   font-size: 1.25rem;
 }
+
+.points-balance {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  margin-left: 0px;
+  padding: 5px 15px; /* Adjust padding */
+  background-color: #efe1f5;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.points-amount {
+  margin-top: 0px; /* Add spacing between Points Balance and amount */
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: #4c51bf; /* Corrected to color */
+}

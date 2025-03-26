@@ -1,8 +1,27 @@
+
+'use client';
+
+import { useState } from "react";
 import Link from "next/link";
 import FormInput from "../../components/FormInput";
+import ResetPassword from "../../components/ResetPassword"; // Import the Reset Password component
 import "./Login.css";
 
 export default function Login() {
+  // Step 2.1: Add state to toggle the popup modal
+  const [showResetPassword, setShowResetPassword] = useState(false);
+
+  // Function to open the popup modal
+  const openResetPasswordPopup = (e) => {
+    e.preventDefault(); // Prevent default link behavior
+    setShowResetPassword(true); // Show the reset password modal
+  };
+
+  // Function to close the popup modal
+  const closeResetPasswordPopup = () => {
+    setShowResetPassword(false); // Close the modal
+  };
+
   return (
     <div className="center-container bg-gray">
       <div className="login-container">
@@ -27,7 +46,15 @@ export default function Login() {
                 <input type="checkbox" />
                 Remember me
               </label>
-              <Link href="/forgot-password">Forgot Password</Link>
+
+              {/* Step 2.2: Change the Forgot Password link to open the popup */}
+              <a
+                href="#"
+                className="forgot-password-link"
+                onClick={openResetPasswordPopup}
+              >
+                Forgot Password
+              </a>
             </div>
             <button className="login-button">Log In</button>
             <button className="google-button">
@@ -51,6 +78,11 @@ export default function Login() {
           </div>
         </div>
       </div>
+
+      {/* Step 2.3: Conditionally render the Reset Password modal */}
+      {showResetPassword && (
+        <ResetPassword onClose={closeResetPasswordPopup} />
+      )}
     </div>
   );
 }

@@ -170,3 +170,27 @@
       height: 120px;
     }
   }
+
+
+  .points-balance-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .points-text {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .points-value {
+    margin-left: 5px;
+    color: #ff9900;
+    font-weight: bold;
+  }
+  
