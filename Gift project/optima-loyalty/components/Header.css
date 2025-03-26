@@ -1,0 +1,38 @@
+/* styles/Header.css */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header nav a {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.header nav a:hover {
+  color: #000;
+}
+
+.header nav .icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.header nav .icons span {
+  font-size: 1.25rem;
+}
